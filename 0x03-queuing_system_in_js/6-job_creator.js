@@ -17,6 +17,8 @@ job.on('complete', () => {
   console.log('Notification job completed');
 });
 
-job.on('failed', () => {
+job.on('failed attempt', () => {
   console.log('Notification job failed');
 });
+
+job.save();
